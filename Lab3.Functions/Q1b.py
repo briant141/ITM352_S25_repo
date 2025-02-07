@@ -17,5 +17,5 @@ print("original string: ", message)
 print("encrypted string: ", encMessage)
 
 decMessage = fernet.decrypt(encMessage).decode()
-# decrypting 
+# decrypting using the fernet class 
 print("decrypted string: ", decMessage)
