@@ -1,4 +1,4 @@
-# We made it into a dictionary, using the {}
+# We made it into a dictionary, using the {}. 
 trip_data = {
     "Trip_id": "da7a62fce",
     "Trip_seconds": 360,
