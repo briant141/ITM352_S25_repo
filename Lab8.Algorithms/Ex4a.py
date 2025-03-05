@@ -9,9 +9,11 @@ def generate_numbers(a_student_id, num_reqs):
    if len(id) != 8:
        raise ValueError("Invalid student ID. It should be 8 digits.")
 
+
    # Use a simple algorithm to generate two unique numbers from 1 to num_reqs
    sum_digits = sum(int(digit) for digit in id)
    first_num = (sum_digits % num_reqs) + 1
+
 
    product_digits = 1
    for digit in id:
@@ -19,20 +21,20 @@ def generate_numbers(a_student_id, num_reqs):
            product_digits *= int(digit)
    second_num = (product_digits % num_reqs) + 1
 
+
    # Ensure the numbers are different
    while second_num == first_num:
        second_num = (second_num % num_reqs) + 1
 
+
    return first_num, second_num
+
 
 # Example usage
 try:
    student_id = input("Enter your student id (XXX-XX-XXX): ")
-   num1, num2 = generate_numbers(student_id, 10) # <- added the 10 here to fix the code
+   num1, num2 = generate_numbers(student_id, 10)
    print(f"Your two numbers are: {num1} and {num2}")
 except ValueError as e:
    print(f"Error: {e}")
-def assign_requirements(requirements):
-    R1, R2 = random.sample(requirements, 2)  # Pick two different random elements
-    return R1, R2
 
