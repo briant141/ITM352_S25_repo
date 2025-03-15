@@ -38,8 +38,8 @@ def grab_answers(num_options):
     choices = [str(i) for i in range(1, num_options + 1)]
     
     while True:
-        raw = input("Pick your answer(s), space-separated: ").split()
-        valid = [ans for ans in raw if ans in choices]
+        picking_choices = input("Pick your answer(s), space-separated: ").split()
+        valid = [ans for ans in picking_choices if ans in choices]
         
         if valid:
             return valid
