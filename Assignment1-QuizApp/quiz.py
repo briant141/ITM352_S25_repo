@@ -61,10 +61,10 @@ def show_questions(question, choices, correct_answers):
     picked = [choices[int(ans) - 1] for ans in user_answers]
 
     if sorted(picked) == sorted(correct_answers):
-        print("Lets go! Nice job!")
+        print("Lets go! Nice freakin job!")
         return True
     else:
-        print(f"Nahhhh! Here is the right answer(s): {', '.join(correct_answers)}")
+        print(f"Nah that ain't it! Here is the right answer(s): {', '.join(correct_answers)}")
         return False
 
 # Over here is the main quiz function. Topic selection, tracking scores, and helps run the quiz.
@@ -89,7 +89,7 @@ def quiz():
         if show_questions(q["question"], q["options"], q["correct_answers"]):
             score += 1
     
-    print(f"\n{username}, your final score is {score}/{len(questions)}")
+    print(f"\n{username}, your score report isss {score}/{len(questions)}! GGs!")
     record_score(username, score, selected_topic)
 
 # Starts the quiz
