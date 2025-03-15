@@ -1,0 +1,28 @@
+[
+    {
+        "question": "This anime is known for having 'Devil Fruits' as one of their main powers. What is that anime called?",
+        "options": ["Dragon Ball Z", "Gintama", "One Piece", "Bleach"],
+        "correct_answers": ["One Piece"]
+    },
+    {
+        "question": "They power up by screaming very loud! What anime is this?",
+        "options": ["Sakamoto Days", "Dragon Ball Super", "Dragon Ball Z", "Dragon Ball GT"],
+        "correct_answers": ["Dragon Ball Super", "Dragon Ball Z", "Dragon Ball GT"]
+    },
+    {
+        "question": "Blue Eyes, White Hair, wears a blindfold. Who is this character?",
+        "options": ["Gojo Satoru", "Kakashi Hatake", "Sakamoto Taro", "Goku"],
+        "correct_answers": ["Gojo Satoru"]
+    },
+    {
+        "question": "His friend betrayed and sacrificed his entire crew to become a godlike being, including his lover. Who is this sicko?",
+        "options": ["Goku Black", "Eren Yeagar", "Zeref", "Griffith"],
+        "correct_answers": ["Griffith"]
+    },
+    {
+        "question": "This anime is about a former hitman who retired because he found his love and family. That is until his past came up to catch him. What anime is this?",
+        "options": ["Sakamoto Days", "John Wick", "The Great Pretender", "Spy x Family"],
+        "correct_answers": ["Sakamoto Days"]
+    }
+]
+

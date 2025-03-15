@@ -1,0 +1,27 @@
+[
+    {
+        "question": "This game is about mine and crafting. What is this game?",
+        "options": ["Terraria", "Stardew Valley", "Minecraft", "Trove"],
+        "correct_answers": ["Minecraft"]
+    },
+    {
+        "question": "You hunt monsters. Literally. What is this game?",
+        "options": ["Monster Hunter World", "Monster Hunter Wild", "The Sims 4", "Monster Hunter Rise"],
+        "correct_answers": ["Monster Hunter World", "Monster Hunter Wild", "Monster Hunter Rise"]
+    },
+    {
+        "question": "His father threw him off a high cliff because of his devil genes. What popular fighting game series franchise is this?",
+        "options": ["Street Fighter", "Tekken", "Mortal Kombat", "Guilty Gear"],
+        "correct_answers": ["Tekken"]
+    },
+    {
+        "question": "FromSoftware is known to produce a series of one of the most difficult ARP games. What is one of their game series called?",
+        "options": ["Dark Souls", "Palworld", "Baldurs Gate 3", "Oldschool Runescape"],
+        "correct_answers": ["Dark Souls"]
+    },
+    {
+        "question": "Arcane, the show, was based off of what video game?",
+        "options": ["Dota 2", "Valorant", "Marvel Rivals", "League of Legends"],
+        "correct_answers": ["League of Legends"]
+    }
+]

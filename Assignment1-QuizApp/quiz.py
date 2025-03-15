@@ -1,0 +1,93 @@
+import json
+import random
+import os
+
+# Get quiz questions from file, or bails if it is not there or missing
+def grab_questions(topic):
+    file_name = f"{topic}_questions.json"
+    
+    if not os.path.isfile(file_name):
+        print(f"R.I.P.'{file_name}' is missing!")
+        exit(1)
+    
+    with open(file_name, "r") as f:
+        return json.load(f)
+
+# Save scores and tracks your progress!
+def record_score(player, points, topic):
+    score_file = "scores.json"
+    
+    try:
+        with open(score_file, "r") as f:
+            scores = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        scores = {}
+
+    if player not in scores:
+        scores[player] = {}
+    if topic not in scores[player]:
+        scores[player][topic] = []
+    
+    scores[player][topic].append(points)
+
+    with open(score_file, "w") as f:
+        json.dump(scores, f, indent=4)
+
+# Making sure that what the users put in for their answer is valid
+def grab_answers(num_options):
+    choices = [str(i) for i in range(1, num_options + 1)]
+    
+    while True:
+        raw = input("Pick your answer(s), space-separated: ").split()
+        valid = [ans for ans in raw if ans in choices]
+        
+        if valid:
+            return valid
+        
+        print(f"Please pick the right options DX. Pick something from 1-{num_options}.")
+
+# Displaying the actual quiz questions and checking for correctness!
+def show_questions(question, choices, correct_answers):
+    print(f"\n {question} ")
+    for i, choice in enumerate(choices, 1):
+        print(f" {i}. {choice}")
+
+    user_answers = grab_answers(len(choices))
+    picked = [choices[int(ans) - 1] for ans in user_answers]
+
+    if sorted(picked) == sorted(correct_answers):
+        print("Lets go! Nice freaking job!")
+        return True
+    else:
+        print(f"Nah that ain't it! Here is the right answer(s): {', '.join(correct_answers)}")
+        return False
+
+# Over here is the main quiz function! Topic selection, tracking scores, and helps run the quiz!
+def quiz_time():
+    player = input("Enter your username here! Or just put something Idk! ")
+    categories = ["anime", "video_games"]
+
+    print("\nPick a topic from two choices:")
+    for i, cat in enumerate(categories, 1):
+        print(f" {i}. {cat.replace('_', ' ').title()}")
+
+    try:
+        topic = categories[int(input("> ")) - 1]
+    except (ValueError, IndexError):
+        print("That ain't a choice bruh! Guess you gonna have to go with 'anime'!")
+        topic = "anime"
+
+    # Over here I added something that will grab those questions and mixes them up
+    questions = grab_questions(topic)
+    random.shuffle(questions)
+
+    score = 0
+    for q in questions:
+        if show_questions(q["question"], q["options"], q["correct_answers"]):
+            score += 1
+
+    print(f"\n {player}, your score report isss {score}/{len(questions)}! GGs! ")
+    record_score(player, score, topic)
+
+# QUIZ TIME! Starting the quiz!
+quiz_time()
