@@ -79,7 +79,7 @@ def display_initial_rows(data):
 def exit_program(data):
     sys.exit("Exiting program.")
 
-# Here I have used AI prompt to add an export functionality and changed it to work with the analysis options in the menu
+# Here I have used AI prompt to add an export functionality and changed it to work with the analysis options in the menu (lines 84-90)
 
 def export_prompt(df_result):
     choice = input("Export to Excel? (y/n): ").strip().lower()
@@ -90,7 +90,7 @@ def export_prompt(df_result):
             print(f"Exported to {filename}.xlsx")
 
 # Filters out any data when the user inputs what they want
-# I used the AI prompt to create a basic row/date filtering logic, then adapted it to help match the assignment requirements
+# I used the AI prompt to create a basic row/date filtering logic, then adapted it to help match the assignment requirements (lines 97-103)
 
 def get_filtered_data(df):
     try:
