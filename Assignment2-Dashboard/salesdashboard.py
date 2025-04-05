@@ -223,34 +223,50 @@ def generate_custom_pivot_table(data):
 
 # This is the display menu, users can choose one of the options or to quit
 # I asked AI for assisstance on how to create a basic menu interface and from there used to create the rest of the interfaces 
-# (lines 227-228, lines 240-252) 
+# (lines 227-250) issubset was a really useful function I found through the use of AI (determining a set is a subset of another)
 def display_menu(data):
-    menu_options = (
-        ("Show the first n rows of sales data", display_initial_rows),
-        ("Total sales by region and order_type", sales_by_region_order_type),
-        ("Average sales by region/state/order_type", avg_sales_by_region_state_type),
-        ("Sales by customer type/order type by state", sales_by_customer_type_state),
-        ("Total qty & price by region and product", total_qty_price_by_region_product),
-        ("Total qty & price by customer type", total_qty_price_by_customer_type),
-        ("Max & min sales price by category", max_min_sales_by_category),
-        ("Number of unique employees by region", unique_employees_by_region),
-        ("Create a custom pivot table", generate_custom_pivot_table),
-        ("Exit the program", exit_program)
-    )
+    menu_options = [("Show the first n rows of sales data", display_initial_rows)]
 
+    if {"sales_region", "order_type", "quantity", "unit_price"}.issubset(data.columns):
+        menu_options.append(("Total sales by region and order_type", sales_by_region_order_type))
+
+    if {"sales_region", "state", "order_type", "quantity", "unit_price"}.issubset(data.columns):
+        menu_options.append(("Average sales by region/state/order_type", avg_sales_by_region_state_type))
+
+    if {"state", "customer_type", "order_type", "quantity", "unit_price"}.issubset(data.columns):
+        menu_options.append(("Sales by customer type/order type by state", sales_by_customer_type_state))
+
+    if {"sales_region", "product_name", "quantity", "unit_price"}.issubset(data.columns):
+        menu_options.append(("Total qty & price by region and product", total_qty_price_by_region_product))
+
+    if {"customer_type", "quantity", "unit_price"}.issubset(data.columns):
+        menu_options.append(("Total qty & price by customer type", total_qty_price_by_customer_type))
+
+    if {"product_category", "quantity", "unit_price"}.issubset(data.columns):
+        menu_options.append(("Max & min sales price by category", max_min_sales_by_category))
+
+    if {"sales_region", "employee"}.issubset(data.columns):
+        menu_options.append(("Number of unique employees by region", unique_employees_by_region))
+
+    # This part allows us to exit from the program as well as adding the options to create a custom pivot table
+    menu_options.append(("Create a custom pivot table", generate_custom_pivot_table))
+    menu_options.append(("Exit the program", exit_program))
+
+# I used AI here to help me on lines 256-259, these lines helped me create the structure and loop of displaying the menu
     while True:
         print("\nMenu:")
-        for i, (option, _) in enumerate(menu_options, 1):
-            print(f"{i}. {option}")
+        for i, (label, _) in enumerate(menu_options, 1):
+            print(f"{i}. {label}")
 
         try:
-            choice = int(input("Enter your choice :D "))
+            choice = int(input("Enter your choice: "))
             if 1 <= choice <= len(menu_options):
                 menu_options[choice - 1][1](data)
             else:
-                print("Invalid option D:")
+                print("Invalid option.")
         except ValueError:
-            print("Enter a valid number >:|")
+            print("Please enter a valid number.")
+
 
 # The main part of the function that helps loads in the data and actually launching the dashboard menu to show up
 def main():
