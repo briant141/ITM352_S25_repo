@@ -88,6 +88,9 @@ def export_prompt(df_result):
         if filename:
             df_result.to_excel(f"{filename}.xlsx")
             print(f"Exported to {filename}.xlsx")
+            
+            print(f"File saved at: {os.path.abspath(filename + '.xlsx')}")
+
 
 # Filters out any data when the user inputs what they want
 # I used the AI prompt to create a basic row/date filtering logic, then adapted it to help match the assignment requirements (lines 97-103)
