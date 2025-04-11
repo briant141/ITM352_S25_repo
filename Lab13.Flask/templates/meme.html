@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10"> <!-- ⏱️ Auto-refresh every 10 seconds -->
+    <title>Wholesome Meme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Here's a wholesome meme for you ❤️</h1>
+    <img src="{{ meme_url }}" alt="Wholesome Meme">
+    <p>From subreddit: <strong>{{ subreddit }}</strong></p>
+</body>
+</html>
