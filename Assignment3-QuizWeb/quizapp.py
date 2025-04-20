@@ -8,7 +8,7 @@ import random, json, os
 app = Flask(__name__)
 app.secret_key = 'your-secret-key'
 
-# Load questions from JSON
+# Load questions from JSON, which I used the questions from my first assignment just to see if I can implement it together somehow
 with open('questions.json') as f:
     all_questions = json.load(f)
 
