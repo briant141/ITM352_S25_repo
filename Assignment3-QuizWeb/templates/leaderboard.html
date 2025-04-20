@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!--I used AI here because I had no idea on how to create a leaderboard. I needed this for my individual requirement.
+Sadly seamonkey lessons didn't really teach me on how to create a leaderboard, but this was interesting to know about.
+Anyways this page is the leaderboard, it shows us our list and the scores they got with their username, and they can return back to home.-->
+<html>
+<head><title>Leaderboard</title></head>
+<body>
+  <h1>THE TOP TENNERS </h1>
+  <ol>
+    {% for entry in leaderboard %}
+      <li>{{ entry.name }} - {{ entry.score }}</li>
+    {% endfor %}
+  </ol>
+  <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

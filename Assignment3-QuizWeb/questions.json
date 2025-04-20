@@ -1,0 +1,57 @@
+{
+    "Anime": [
+      {
+        "question": "This anime is known for having 'Devil Fruits' as one of their main powers. What is that anime called?",
+        "options": ["Dragon Ball Z", "Gintama", "One Piece", "Bleach"],
+        "correct_answers": ["One Piece"]
+      },
+      {
+        "question": "This anime is based on a Korean Manhwa, he levels up to get stronger!",
+        "options": ["Misfit Demon Academy", "Solo Leveling", "Hunter x Hunter", "Godzilla"],
+        "correct_answers": ["Solo Leveling"]
+      },
+      {
+        "question": "Blue Eyes, White Hair, wears a blindfold. Who is this character?",
+        "options": ["Gojo Satoru", "Kakashi Hatake", "Sakamoto Taro", "Goku"],
+        "correct_answers": ["Gojo Satoru"]
+      },
+      {
+        "question": "His friend betrayed and sacrificed his entire crew to become a godlike being, including his lover. Who is this sicko?",
+        "options": ["Goku Black", "Eren Yeagar", "Zeref", "Griffith"],
+        "correct_answers": ["Griffith"]
+      },
+      {
+        "question": "This anime is about a former hitman who retired because he found his love and family. That is until his past came up to catch him. What anime is this?",
+        "options": ["Sakamoto Days", "John Wick", "The Great Pretender", "Spy x Family"],
+        "correct_answers": ["Sakamoto Days"]
+      }
+    ],
+    "Gaming": [
+      {
+        "question": "This game is about mine and crafting. What is this game?",
+        "options": ["Terraria", "Stardew Valley", "Minecraft", "Trove"],
+        "correct_answers": ["Minecraft"]
+      },
+      {
+        "question": "You hunt monsters. Literally. What is this game?",
+        "options": ["Monster Hunter", "Pokemon", "The Sims 4", "Demon Slayer Chronicles"],
+        "correct_answers": ["Monster Hunter"]
+      },
+      {
+        "question": "His father threw him off a high cliff because of his devil genes. What popular fighting game series franchise is this?",
+        "options": ["Street Fighter", "Tekken", "Mortal Kombat", "Guilty Gear"],
+        "correct_answers": ["Tekken"]
+      },
+      {
+        "question": "FromSoftware is known to produce a series of one of the most difficult ARP games. What is one of their game series called?",
+        "options": ["Dark Souls", "Palworld", "Baldurs Gate 3", "Oldschool Runescape"],
+        "correct_answers": ["Dark Souls"]
+      },
+      {
+        "question": "Arcane, the show, was based off of what video game?",
+        "options": ["Dota 2", "Valorant", "Marvel Rivals", "League of Legends"],
+        "correct_answers": ["League of Legends"]
+      }
+    ]
+  }
+  

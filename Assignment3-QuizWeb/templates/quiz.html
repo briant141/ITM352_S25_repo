@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--I used based on this assignment workshop. The parts I used AI for was the timer part. 
+I needed to understand on how to get the timer added in order to meet my individual requirement.
+So, this part not only is the timer, but it is also the main focus of the quiz where it shows the questions and choices -->
+<html>
+<head>
+  <title>Quiz</title>
+  <script>
+    let timeLeft = 15;
+    const timer = setInterval(function() {
+      document.getElementById("timer").innerText = timeLeft + "s";
+      <!--I used --> 
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        document.getElementById("quiz-form").submit();
+      }
+      timeLeft--;
+    }, 1000);
+  </script>
+</head>
+<body>
+  <h2>Question {{ index }} of {{ total }}</h2>
+  <p id="timer">15s</p>
+  <form method="post" id="quiz-form">
+    <p>{{ question.question }}</p>
+    {% for letter, option in options %}
+      <label><input type="radio" name="answer" value="{{ letter }}" required> {{ letter }}) {{ option }}</label><br>
+    {% endfor %}
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
