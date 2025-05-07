@@ -1,0 +1,78 @@
+# I asked AI to sum up my project for me in this README file. Pretty much did what I wanted to do.
+
+# 🧠 Habit Tracker (Final Project for ITM 352)
+
+## 📌 Project Overview
+
+This is a console-based Python application that helps users build and maintain positive daily habits. Users can add habits, mark them as completed each day, view their current streaks, and visualize their progress with bar charts.
+
+The purpose of this app is to keep users motivated by making their habit data visible and easy to track.
+
+---
+
+## ⚙️ Features
+
+- ✅ Add and remove habits
+- ✅ Mark habits as completed for the day
+- ✅ View a summary of each habit:
+  - Total completions
+  - Current streak
+- ✅ Visualize habit completion counts with bar charts (`matplotlib`)
+- ✅ All data is saved in a JSON file and automatically loaded on startup
+
+---
+
+## 🧪 Technologies Used
+
+- **Python 3**
+- `json` — for saving/loading habit data
+- `datetime` — for date tracking and streak logic
+- `matplotlib` — for visualizing habit progress
+- `os` — to handle file paths and check for saved data
+
+---
+
+## 🧠 Class Topics Applied
+
+- **File I/O:** The app reads/writes user progress using `habit_data.json`.
+- **Dictionaries and Lists:** Used to manage habit names and completion history.
+- **Statistical Charts:** Bar graphs show how many times each habit has been completed using `matplotlib`.
+
+---
+
+## 🌟 Stretch Goals
+
+- 🔁 **Streak Tracking**: Calculates consecutive days a habit has been completed (e.g., like Duolingo).
+- 🔢 **Number-Based Menus**: Users can select habits by number instead of typing full names, improving usability.
+
+---
+
+## 🤖 AI Usage
+
+AI assistance (ChatGPT) was used for help with:
+- Designing the streak calculation function
+- Refactoring the menu to use numbered habit selection
+- Structuring core functions like data saving/loading
+
+All AI-assisted sections are labeled in the code with comments, following course guidelines.
+
+## 📂 How to Run
+
+1. Clone the repo or download the Python file
+2. Make sure you have Python 3 installed
+3. Run `habit_tracker.py` in your terminal or IDE
+4. Use the menu to start building habits!
+
+---
+
+## 📁 Data Storage
+
+Habit data is saved to a file named `habit_data.json` in the same folder as the script. This keeps your progress between sessions.
+
+---
+
+## 🙏 Credits
+
+Created by **Bryant Kim** for the ITM 352 Final Project  
+University of Hawai‘i at Mānoa — Spring 2025
+
